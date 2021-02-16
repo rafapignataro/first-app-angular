@@ -1,0 +1,31 @@
+<!-- EVENT BINDING -->
+
+<button (click)="onClickBotaoEmissor($event)">
+  Emitir informação de click
+</button><br><br>
+
+<button
+  (click)="onClick($event)"
+  (mouseenter)="passouMouse()">
+  Clique em mim!
+</button><br><br>
+
+<input type="text"
+  [value]="valorDoInput"
+  (keyup)="digitouAlgo($event)"><br>
+
+  <p>{{ valorDoInput}}</p>
+
+<!-- PROPERTY BINDING -->
+
+<!-- [src] -> Property Binding faz elemento não precisar de interpolação -->
+<input type="text" name="" id="" [value]="inputValue"><br>
+
+<h2>{{palavra}}</h2><br>
+<h3>{{color}}</h3><br>
+
+<button [disabled]="isButtonDisabled">Click me</button><br>
+
+<p [attr.aria-label]="ariaLabel">Teste oficial</p><br>
+
+<img [src]="imageURL" alt="" srcset=""><br>

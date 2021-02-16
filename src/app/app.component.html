@@ -1,4 +1,16 @@
-<app-header></app-header>
-<app-home></app-home>
+<!-- String dentro de string passa direto a informação -->
+<app-header [title]="headerTitle"></app-header>
+<app-counter
+[initialValue]="3"
+(valueChanged)="counterChanged($event)"
+>
+</app-counter>
+
+<app-ex-data-binding
+  [palavra]="pudim"
+  [color]="'green'"
+  (clicado)="eventoRecebido($event)"
+  >
+</app-ex-data-binding>
 <app-footer></app-footer>
 

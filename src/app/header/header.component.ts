@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  title = 'Seja bem-vindo!';
+  // Ao atribuir um valor ao Input de dados ele adquire um padrão caso não seja
+  // passado
+  @Input() title = 'Titulo Padrão';
 
   constructor() {}
 

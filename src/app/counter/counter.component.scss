@@ -1,0 +1,27 @@
+.counter_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  background-color: aquamarine;
+  margin: 10px;
+  padding: 5px;
+
+  button {
+    outline: 0;
+    border: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: lightseagreen;
+
+    &:hover {
+      background-color: lightblue;
+    }
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
