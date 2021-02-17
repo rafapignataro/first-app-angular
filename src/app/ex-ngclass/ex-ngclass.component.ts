@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ex-ngclass',
@@ -11,10 +11,14 @@ import { Component } from '@angular/core';
   // - Cria elemento shadow no html com estilos próprios
   // encapsulation: ViewEncapsulation.ShadowDom,
 })
-export class ExNgclassComponent {
+export class ExNgclassComponent implements OnInit {
   deveSerVerde = false;
 
   tornaVerde() {
     this.deveSerVerde = !this.deveSerVerde;
+  }
+
+  ngOnInit() {
+    console.log('Init');
   }
 }

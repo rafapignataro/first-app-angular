@@ -1,6 +1,6 @@
 <button (click)="tornaVerde()">Muda Cor</button>
 
-<p [ngClass]="deveSerVerde ? 'green': 'red'">ex-ngclass works!</p>
+<p [ngClass]="deveSerVerde ? 'green': 'red'">{{deveSerVerde}}</p>
 
 <p [ngClass]="{
   'green': deveSerVerde,

@@ -1,0 +1,12 @@
+<div>
+  <h2>Lista de Compras</h2>
+  <hr>
+  <div *ngFor="let item of compras">
+    <h3>Produto: {{ item.produto | uppercase }}</h3>
+    <h5>Valor: {{ item.valor | currency: 'BRL' }}</h5>
+    <h5>Quantidade: {{ item.quantidade }}</h5>
+    <h5>Peso: {{ getPesoFormatado(item.peso) }}</h5>
+    <h5>Data: {{ item.data | date: 'medium' }}</h5>
+    <hr>
+  </div>
+</div>
