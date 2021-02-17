@@ -1,18 +1,16 @@
 <!-- String dentro de string passa direto a informação -->
 <app-header [title]="headerTitle"></app-header>
 
-Valor counterValue: {{ counterValue}}
-
 <!-- Two Way Data Binding: Atualiza a variavel passada como valor ao mesmo tempo
 que atualiza a variavel interna -->
-<app-counter *ngIf="true"
+<!-- <app-counter *ngIf="true"
 [(value)]="counterValue"
 >
 </app-counter>
 
 <app-ex-diretivas>
 
-</app-ex-diretivas>
+</app-ex-diretivas> -->
 
 <!-- Mesmo efeito que que o de cima mas sem Two Day Data Binding  -->
 <!-- <app-counter
@@ -27,5 +25,7 @@ que atualiza a variavel interna -->
   (clicado)="eventoRecebido($event)"
   >
 </app-ex-data-binding> -->
+
+<app-ex-ngclass></app-ex-ngclass>
 <app-footer></app-footer>
 

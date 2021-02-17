@@ -9,9 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { ExDataBindingComponent } from './ex-data-binding/ex-data-binding.component';
 import { CounterComponent } from './counter/counter.component';
 import { ExDiretivasComponent } from './ex-diretivas/ex-diretivas.component';
+import { ExNgclassComponent } from './ex-ngclass/ex-ngclass.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, ExDataBindingComponent, CounterComponent, ExDiretivasComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, ExDataBindingComponent, CounterComponent, ExDiretivasComponent, ExNgclassComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
