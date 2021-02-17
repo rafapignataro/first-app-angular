@@ -5,14 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter/counter.component';
-import { ExDataBindingComponent } from './ex-data-binding/ex-data-binding.component';
-import { ExDiretivasComponent } from './ex-diretivas/ex-diretivas.component';
-import { ExNgclassComponent } from './ex-ngclass/ex-ngclass.component';
-import { ExPipeComponent } from './ex-pipe/ex-pipe.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { CounterComponent } from './shared/components/counter/counter.component';
+import { ExDataBindingComponent } from './shared/components/ex-data-binding/ex-data-binding.component';
+import { ExDiretivasComponent } from './shared/components/ex-diretivas/ex-diretivas.component';
+import { ExNgclassComponent } from './shared/components/ex-ngclass/ex-ngclass.component';
+import { ExPipeComponent } from './shared/components/ex-pipe/ex-pipe.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 registerLocaleData(localePT, 'pt');
 
