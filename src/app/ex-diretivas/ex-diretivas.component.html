@@ -33,3 +33,20 @@
     {{ primeiro }} {{ ultimo }} ID: {{i + 1}} | Nome: {{item.name}} | Age: {{ item.age}}
   </li>
 </ul>
+
+<img src="https://github.com/vitorfgsantos/angular-memes-diretivas/blob/master/images/angular-1.jpg?raw=true" alt="">
+
+<div class="categories-container">
+  <div class="category-container" *ngFor="let item of categoriaMemes;">
+    <h3>{{item.categoria}}</h3>
+    <div class="category-memes-container">
+      <div class="category-meme-container"  *ngFor="let meme of item.memes; even as par">
+        <ng-template [ngIf]="!par">
+          <h5>{{meme.titulo}}</h5>
+          <img src="{{imagesURL}}{{meme.imagemURL}}?raw=true" alt="" witdh="100" height="100">         
+        </ng-template>
+        <h5 *ngIf="par">PAR</h5>
+      </div>
+    </div>
+  </div>
+</div>

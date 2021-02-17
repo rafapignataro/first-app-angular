@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.categories-container {
+  background-color: rgb(66, 13, 211);
+  font-family: sans-serif;
+  padding: 10px;
+
+  .category-container {
+    background-color: rgb(88, 40, 219);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+
+    .category-memes-container {
+      display: flex;
+      align-items: center;
+
+      .category-meme-container {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+
+        h5 {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

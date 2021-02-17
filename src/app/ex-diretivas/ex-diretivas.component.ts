@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import categoriaMemes from './dados';
+
 @Component({
   selector: 'app-ex-diretivas',
   templateUrl: './ex-diretivas.component.html',
@@ -7,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class ExDiretivasComponent {
   deveExibir = false;
+
+  categoriaMemes = categoriaMemes;
+
+  imagesURL =
+    'https://github.com/vitorfgsantos/angular-memes-diretivas/blob/master/images';
 
   array = [
     { name: 'Rafael', age: 15 },
