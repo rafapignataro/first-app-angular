@@ -6,19 +6,21 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./counter.component.scss'],
 })
 export class CounterComponent implements OnInit {
-  @Input() initialValue: number;
-  @Output() valueChanged = new EventEmitter();
+  // Para o Two Way Data Binding funcionar o Input e Output devem ser iguais
+  // porém o Ouput com a palavra Change (teste, testeChange)
+  @Input() value: number;
+  @Output() valueChange = new EventEmitter();
 
   handleSumClick(): void {
-    this.initialValue++;
-
-    this.valueChanged.emit('Somou');
+    this.value++;
+    this.valueChange.emit(this.value);
   }
 
   handleSubClick(): void {
-    this.initialValue--;
-
-    this.valueChanged.emit('Subtraiu');
+    if (this.value > 0) {
+      this.value--;
+      this.valueChange.emit(this.value);
+    }
   }
 
   constructor() {}

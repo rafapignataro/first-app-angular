@@ -10,11 +10,15 @@ export class AppComponent {
   headerTitle = 'Sejam Bem-Vindos!';
   constructor() {}
 
+  counterValue = 10;
+
   eventoRecebido(event) {
     console.log('PARENT:', event);
   }
 
-  counterChanged(message) {
-    console.log(message);
-  }
+  // Necessária para a atualização da CounterValue sem o Two Way Data Binding
+  // counterChanged(value) {
+  //   this.counterValue = value;
+  //   console.log(value);
+  // }
 }
