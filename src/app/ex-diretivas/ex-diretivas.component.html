@@ -1,0 +1,35 @@
+<p >Valor deveExibir: {{deveExibir}}</p>
+
+<button (click)="trocarValor()">
+  TROCAR VALOR
+</button>
+
+<p *ngIf="deveExibir; else elseBlock">ex-diretivas works!</p>
+
+<ng-template #elseBlock>
+  <p>Teste</p>
+</ng-template>
+
+
+<p *ngIf="soma(5, 6) > 10">Exibido pois soma é maior</p>
+
+<ng-template [ngIf]="true">
+  Template shorthand
+</ng-template>
+
+<p *ngIf="deveExibir; then blocoTrue else blocoFalse">ex-diretivas works!</p>
+
+<ng-template #blocoTrue>
+  <p>blocoTrue</p>
+</ng-template>
+
+<ng-template #blocoFalse>
+  <p>blocoFalse</p>
+</ng-template>
+
+
+<ul>
+  <li *ngFor="let item of array; let i = index; first as primeiro; last as ultimo">
+    {{ primeiro }} {{ ultimo }} ID: {{i + 1}} | Nome: {{item.name}} | Age: {{ item.age}}
+  </li>
+</ul>

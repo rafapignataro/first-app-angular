@@ -8,9 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ExDataBindingComponent } from './ex-data-binding/ex-data-binding.component';
 import { CounterComponent } from './counter/counter.component';
+import { ExDiretivasComponent } from './ex-diretivas/ex-diretivas.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, ExDataBindingComponent, CounterComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, ExDataBindingComponent, CounterComponent, ExDiretivasComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

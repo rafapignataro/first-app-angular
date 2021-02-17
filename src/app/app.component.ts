@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   pudim = 'Uma palavra';
+
   headerTitle = 'Sejam Bem-Vindos!';
-  constructor() {}
 
   counterValue = 10;
 
-  eventoRecebido(event) {
+  static eventoRecebido(event) {
     console.log('PARENT:', event);
   }
 

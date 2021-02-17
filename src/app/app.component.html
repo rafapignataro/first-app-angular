@@ -5,10 +5,14 @@ Valor counterValue: {{ counterValue}}
 
 <!-- Two Way Data Binding: Atualiza a variavel passada como valor ao mesmo tempo
 que atualiza a variavel interna -->
-<app-counter
+<app-counter *ngIf="true"
 [(value)]="counterValue"
 >
 </app-counter>
+
+<app-ex-diretivas>
+
+</app-ex-diretivas>
 
 <!-- Mesmo efeito que que o de cima mas sem Two Day Data Binding  -->
 <!-- <app-counter
@@ -17,11 +21,11 @@ que atualiza a variavel interna -->
 >
 </app-counter> -->
 
-<app-ex-data-binding
+<!-- <app-ex-data-binding
   [palavra]="pudim"
   [color]="'green'"
   (clicado)="eventoRecebido($event)"
   >
-</app-ex-data-binding>
+</app-ex-data-binding> -->
 <app-footer></app-footer>
 
