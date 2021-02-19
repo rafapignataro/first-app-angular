@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent {
 
   form: any;
 
-  onSubmit(form: FormGroup) {
+  onSubmit(form: NgForm) {
     if (!form.valid) {
       form.controls.email.markAsTouched();
       form.controls.password.markAsTouched();
@@ -33,7 +33,7 @@ export class LoginComponent {
     }
   }
 
-  exibeErro(form: FormGroup, elementName: string) {
+  exibeErro(form: NgForm, elementName: string) {
     if (!form.controls[elementName]) return false;
     return (
       form.controls[elementName]?.invalid && form.controls[elementName].touched
