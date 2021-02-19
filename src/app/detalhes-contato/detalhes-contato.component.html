@@ -1,0 +1,22 @@
+<div class="container text-center" >
+  <div class="spinner-border my-5" role="status" *ngIf="isLoading">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="m-5" *ngIf="isError">
+    <h2>500 - Erro :(</h2>
+    <button (click)="getContact()" class="btn btn-primary">Tentar novamente</button>
+  </div>
+  <div class="m-3" *ngIf="!isLoading">
+    <p>{{contact.nome}}</p>
+    <p>{{contact.cpf}}</p>
+    <p>{{contact.banco}}</p>
+    <p>{{contact.ag}}</p>
+    <p>{{contact.cc}}</p>
+  </div>
+  <button class="btn btn-primary my-3" (click)="voltar()">Voltar</button>
+</div>
+
+
+      
+
+

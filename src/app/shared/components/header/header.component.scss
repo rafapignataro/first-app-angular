@@ -1,11 +1,34 @@
 .header {
   text-align: center;
   padding: 0.8rem;
-  background-color: rgb(176, 75, 216);
+  background-color: #7e8edf;
 
   &__title {
     color: #ebedf7;
     margin: 0;
     font-size: 2rem;
+    font-family: sans-serif;
+  }
+
+  .nav-bar-list {
+    display: flex;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      a {
+        display: inline-block;
+        color: #fff;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: #0e2bbe;
+        border-radius: 5px;
+        margin: 0 5px;
+      }
+
+      .ativado {
+        background-color: #3c57e2;
+      }
+    }
   }
 }

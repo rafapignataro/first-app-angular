@@ -1,0 +1,38 @@
+<div class="text-center">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="form-signin pt-5">
+    <div class="p-2">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        name="email"
+        [(ngModel)]="email"
+        required
+        email
+        #emailInput
+      />
+      <p *ngIf="exibeErro(form, 'email')" class="text-left py-0 m-0">
+        E-mail inválido
+      </p>
+    </div>
+    <div class="p-2">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        name="password"
+        [(ngModel)]="password"
+        required
+        #passwordInput
+      />
+      <p *ngIf="exibeErro(form, 'password')" class="text-left py-0 m-0">
+        Senha inválida
+      </p>
+    </div>
+    <div class="p-2">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Entrar
+      </button>
+    </div>
+  </form>
+</div>

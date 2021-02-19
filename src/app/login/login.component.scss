@@ -1,0 +1,25 @@
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+// Sem angular
+// input {
+//   + p {
+//     font-weight: bold;
+//   }
+// }
+
+// input:invalid:focus {
+//   border: 2px solid rgb(202, 56, 56);
+//   box-shadow: 0px 0px 2px rgb(202, 56, 56);
+
+//   + p {
+//     color: rgb(202, 56, 56);
+//   }
+// }
+
+.ng-invalid.ng-touched {
+  border-color: rgb(202, 56, 56);
+}

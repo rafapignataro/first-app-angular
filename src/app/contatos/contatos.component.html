@@ -1,0 +1,36 @@
+<div class="container text-center" >
+  
+  <div class="spinner-border my-5" role="status" *ngIf="isLoading">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="m-5" *ngIf="isError">
+    <h2>500 - Erro :(</h2>
+    <button (click)="getExtrato()" class="btn btn-primary">Tentar novamente</button>
+  </div>
+
+  <table class="table table-hover" *ngIf="!isLoading && !isError">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Banco</th>
+      <th>Agencia</th>
+      <th>Conta</th>
+      <th>Ações</th>
+    </tr>
+  
+    <tr *ngFor="let contact of contacts">
+      <td>{{contact.id}}</td>
+      <td>{{contact.nome}}</td>
+      <td>{{contact.cpf}}</td>
+      <td>{{contact.banco}}</td>
+      <td>{{contact.ag}}</td>
+      <td>{{contact.cc}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="irDetalhes(contact.id)">Detalhes</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
