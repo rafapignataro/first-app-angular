@@ -1,12 +1,16 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+import { LoginService } from './login.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
+  constructor(private loginService: LoginService) {}
+
   @ViewChild('emailInput') emailInput: ElementRef;
 
   @ViewChild('passwordInput') passwordInput: ElementRef;
@@ -31,6 +35,15 @@ export class LoginComponent {
         this.passwordInput.nativeElement.focus();
       }
     }
+
+    this.login(this.email, this.password);
+  }
+
+  login(email: string, password: string) {
+    this.loginService.enter(email, password).subscribe(
+      (response) => console.log('Sucesso', response),
+      (error) => console.error(error),
+    );
   }
 
   exibeErro(form: NgForm, elementName: string) {
