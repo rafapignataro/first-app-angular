@@ -30,9 +30,19 @@
       </p>
     </div>
     <div class="p-2">
-      <button class="btn btn-lg btn-primary btn-block" type="submit">
+      <button
+        class="btn btn-lg btn-primary btn-block"
+        type="submit"
+        [disabled]="isLoading"
+      >
         Entrar
       </button>
     </div>
   </form>
+  <div class="spinner-border my-1" role="status" *ngIf="isLoading">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="my-1" *ngIf="isError">
+    <p class="text-danger">Usuário e/ou senha incorretos!</p>
+  </div>
 </div>
