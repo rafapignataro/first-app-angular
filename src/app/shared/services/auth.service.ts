@@ -10,12 +10,12 @@ export class AuthService {
 
   token: string;
 
-  setUsuario(user: any) {
+  setUser(user: any) {
     this.user = user;
     localStorage.setItem('user', JSON.stringify(user));
   }
 
-  getUsuario() {
+  getUser() {
     if (this.user) return this.user;
 
     const user = localStorage.getItem('user');
@@ -26,7 +26,7 @@ export class AuthService {
   setToken(token: string) {
     this.token = token;
 
-    localStorage.getItem('token');
+    localStorage.setItem('token', token);
   }
 
   getToken() {
@@ -34,6 +34,10 @@ export class AuthService {
 
     const token = localStorage.getItem('token');
 
-    return token;
+    return token || null;
+  }
+
+  isLogged(): boolean {
+    return !!(this.getUser() && this.getToken());
   }
 }

@@ -3,16 +3,10 @@
   padding: 0.8rem;
   background-color: #7e8edf;
 
-  &__title {
-    color: #ebedf7;
-    margin: 0;
-    font-size: 2rem;
-    font-family: sans-serif;
-  }
-
   .nav-bar-list {
     display: flex;
     justify-content: center;
+    margin: 0;
 
     li {
       list-style: none;

@@ -28,7 +28,7 @@ export class LoginService {
       }).pipe(
         delay(2000),
         tap((response) => {
-          this.authService.setUsuario(response.user);
+          this.authService.setUser(response.user);
           this.authService.setToken(response.token);
         }),
       );

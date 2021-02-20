@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
   user: any;
 
   ngOnInit(): void {
-    this.user = this.authService.getUsuario();
+    this.user = this.authService.getUser();
   }
 }

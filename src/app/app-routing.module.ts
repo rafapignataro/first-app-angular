@@ -1,33 +1,34 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ContatosComponent } from './contatos/contatos.component';
-import { DetalhesContatoComponent } from './detalhes-contato/detalhes-contato.component';
 import { ExtratoComponent } from './extrato/extrato.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { IsLoggedGuard } from './shared/guards/is-logged.guard';
+import { IsNotLoggedGuard } from './shared/guards/is-not-logged.guard';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [IsLoggedGuard],
   },
   {
     path: 'login',
     component: LoginComponent,
+    canActivate: [IsNotLoggedGuard],
   },
   {
     path: 'extrato',
     component: ExtratoComponent,
+    canActivate: [IsLoggedGuard],
   },
   {
     path: 'contatos',
-    component: ContatosComponent,
-  },
-  {
-    path: 'contatos/:id',
-    component: DetalhesContatoComponent,
+    loadChildren: () =>
+      import('./contatos/contatos.module').then((m) => m.ContatosModule),
+    canActivate: [IsLoggedGuard],
   },
   {
     path: '',
