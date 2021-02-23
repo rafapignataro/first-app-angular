@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   pudim = 'Uma palavra';
 
-  headerTitle = 'Sejam Bem-Vindos!';
-
   counterValue = 10;
 
   static eventoRecebido(event) {
