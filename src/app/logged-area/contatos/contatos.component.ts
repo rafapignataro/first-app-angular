@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { finalize, take } from 'rxjs/operators';
 
 import { IContact } from './contatos.interfaces';
@@ -14,6 +15,7 @@ export class ContatosComponent implements OnInit {
   constructor(
     private contatosService: ContatosService,
     private router: Router,
+    private toastr: ToastrService,
   ) {}
 
   contacts: IContact[] = [];
@@ -54,5 +56,23 @@ export class ContatosComponent implements OnInit {
 
   irDetalhes(idContato: number) {
     this.router.navigate([`/contatos/${idContato}`]);
+  }
+
+  goToCreate() {
+    this.router.navigate(['/contatos/create']);
+  }
+
+  goToSUpdate(idContato) {
+    this.router.navigate([`/contatos/${idContato}/edit`]);
+  }
+
+  delete(id: number) {
+    this.contatosService.deleteContact(id).subscribe(
+      () => {
+        this.contacts = this.contacts.filter((contact) => contact.id !== id);
+        this.toastr.success('Success', 'Contact deleted!');
+      },
+      (error) => this.toastr.error('Error', error),
+    );
   }
 }

@@ -3,6 +3,8 @@ import { HttpClientModule } from '@angular/common/http';
 import localePT from '@angular/common/locales/pt';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +22,14 @@ registerLocaleData(localePT, 'pt');
     ExtratoComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SharedModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    SharedModule,
+    ToastrModule.forRoot(),
+  ],
   providers: [
     {
       provide: LOCALE_ID,
